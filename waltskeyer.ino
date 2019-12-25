@@ -1,13 +1,13 @@
 /*
   Project:   waltskeyer
   Source:    http://github.com/pa3hcm/waltskeyuer
-  Authors:   Ernest Neijenhuis PA3HCM
-  Copyright: (c) Ernest Neijenhuis PA3HCM
+  Author:    Ernest Neijenhuis PA3HCM
 */
 
 const int DOTTIME = 100;
 const int KEYDOWN = 37;
 const int KEYUP = 41;
+const int KEYSLEEP = 60;
 
 #include <Servo.h>
 Servo hand;
@@ -28,38 +28,23 @@ void loop() {
 
 
 void message() {
-  dah();
-  dah();
+  dah(); dah();               // M
   pauseChar();
-  dit();
+  dit();                      // E
   pauseChar();
-  dit();
-  dah();
-  dit();
+  dit(); dah(); dit();        // R
   pauseChar();
-  dit();
-  dah();
-  dit();
+  dit(); dah(); dit();        // R
   pauseChar();
-  dah();
-  dit();
-  dah();
-  dah();
+  dah(); dit(); dah(); dah(); // Y
   pauseWord();
-  dah();
-  dit();
-  dit();
-  dah();
+  dah(); dit(); dit(); dah(); // X
   pauseChar();
-  dah();
-  dah();
+  dah(); dah();               // M
   pauseChar();
-  dit();
-  dah();
+  dit(); dah();               // A
   pauseChar();
-  dit();
-  dit();
-  dit();
+  dit(); dit(); dit();        // S
 }
 
 void pa3hcm() {
@@ -115,14 +100,14 @@ void pauseWord() {
 }
 
 void mount() {
-  for (int i=60; i > KEYUP; i--) {
+  for (int i=KEYSLEEP; i > KEYUP; i--) {
     hand.write(i);
     delay(100);
   }
 }
 
 void dismount() {
-  for (int i=KEYUP; i < 60; i++) {
+  for (int i=KEYUP; i < KEYSLEEP; i++) {
     hand.write(i);
     delay(100);
   }
