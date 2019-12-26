@@ -1,6 +1,6 @@
 /*
   Project:   waltskeyer
-  Source:    http://github.com/pa3hcm/waltskeyuer
+  Source:    http://github.com/pa3hcm/waltskeyer
   Author:    Ernest Neijenhuis PA3HCM
 */
 
